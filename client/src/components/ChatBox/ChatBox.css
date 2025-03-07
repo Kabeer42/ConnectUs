@@ -1,0 +1,229 @@
+.ChatBox-container {
+    background: var(--cardColor);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-rows: 13vh 63vh 10vh;
+}
+
+.chat-header {
+    padding: 1rem 1rem 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    overflow: scroll;
+}
+
+.message {
+
+  background: var(--buttonBg);
+  color: white;
+  padding: 0.7rem;
+  border-radius: 1rem 1rem 1rem 0;
+  max-width: 28rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.message>span:nth-child(2){
+    font-size: 0.7rem;
+    color: var(--textColor);
+    align-self: end;
+}
+
+.own {
+  align-self: flex-end;
+  border-radius: 1rem 1rem 0 1rem;
+  background: linear-gradient(98.63deg, #24e4f0 0%, #358ff9 100%);
+}
+
+
+
+.chat-sender {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    height: 3.5rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    align-self: end;
+}
+.chat-sender>input{
+    height: 70%;
+    background-color: rgb(236, 236, 236);
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    flex  :1 ;
+    font-size: 14px;
+    padding: 0px 15px 0px 15px;
+}
+.chat-sender>div:nth-of-type(1)
+{
+    background: rgb(233, 233, 233);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer
+
+
+}
+.chat-sender>div{
+    height: 70%;
+    padding: 15px;
+}
+.chat-sender>div:nth-of-type(3){
+   margin-right: 30px;
+}
+.file-selector-card{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 0px ;
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    box-shadow: #b879ff 2px 2px 5px;
+    left: 0;
+    bottom: 200%;
+    /* width: 100%; */
+    /* height: 450px; */
+    z-index: 8;
+}
+.file-selector{
+    padding: 10px 20px ;
+    /* margin: 0 5px; */
+   
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: bold;
+    cursor: pointer
+}
+.file-selector >img{
+    
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    mix-blend-mode:multiply
+}
+
+.file-selector:hover{
+    background: rgb(233, 233, 233);
+}
+.file-selector>input{
+    display: none;
+}
+
+.file-selector>span{
+    font-size: 14px;
+    font-weight: 500;
+}
+.previewCard{
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0);
+    width: 50%;
+    /* height: 320px; */
+    background: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: #b879ff 2px 2px 5px;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     padding: auto;
+     padding-top: 20px;
+     padding-bottom: 20px;
+}
+
+.previewCard .preview-box{
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.preview-box>img{
+    width: 100%;
+    height:  100%;
+    object-fit: contain;
+   
+}
+.preview-footer{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 10px 0;
+margin-top: 10px;
+height: 45px;
+}
+
+.preview-footer>button{
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 0px 30px;
+}
+
+
+
+.preview-footer>button>img{
+    width: 20px;
+    height: 20px;
+}
+
+.document-preview{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+
+.pdf-thumbnail-name-container{
+    position:absolute; bottom:0;
+     left:0;
+     right:0;
+     /* height:100px; */
+     padding: 10px;
+     background: linear-gradient(122deg, #24e4f0 0%, #358ff9 100%);
+     box-shadow:grey 2px ;
+     display:flex;
+     flex-direction: column;   
+    }
+.pdf-thumbnail-name-container .btn{
+    color: aliceblue;
+   
+    background-color: #b879ff;
+    padding:8px;
+}
+
+.pdf-thumbnail-name-container .btn:hover{
+
+    color: #b879ff;
+    padding:8px;
+    font-weight: 500;
+    background-color: aliceblue;
+    border: #b879ff solid 2px;
+}

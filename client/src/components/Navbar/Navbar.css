@@ -1,0 +1,227 @@
+
+
+.job-navbar{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+   display: flex;
+   justify-content:space-between ;
+   align-items: center;
+   background-color: #ededed;
+   background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+   background-blend-mode: soft-light,screen;
+   margin: 0px;
+   padding: 10px 30px;
+    z-index: 10;
+   /* gap: 30px; */
+}
+.job-navbar .logo{
+    position: relative;
+    align-items: center;
+    gap: 8px;
+}
+.job-navbar .logo img{
+    height: 45px;
+}
+
+.job-navbar .logo h4{
+color:  #f9a225 ;
+margin: 0px;
+}
+.job-navbar div{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.job-navbar div img{
+    height: 25px;
+}
+
+.nav-center-div{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-center-div div{
+    display:flex; flex-direction: column;
+     align-items: center;
+      cursor:pointer
+}
+
+.nav-center-div div img{
+    height: 35px;
+}
+
+.nav-right-div{
+    position: relative;
+}
+.nav-right-div .profile-img{
+    border-radius: 50%; 
+    height:45px;
+    width:45px;
+     object-fit: cover
+}
+.nav-right-div .profile-img:hover{
+    cursor: pointer;
+}
+.profile-dropdown{
+    display: block;
+    position: absolute;
+    height: auto;
+    /* width: 300px; */
+    top: 46px;  
+    border-radius: 10px;
+    z-index: 1;
+    background: white;
+    right: -20px;
+    padding: 20px;
+
+    box-shadow: 0px 4px 8px 0px rgba(147, 147, 147, 0.587);
+
+}
+
+.sidebar {
+    position: fixed;
+    top: -110%;  
+    width: 30%;
+    /* bottom: 0; */
+    right: 30px;
+    height: 85%;
+    background-color: #f8f0f0;
+    box-shadow: 0 4px 8px rgba(82, 82, 82, 0.2);
+    transition: top 0.3s ease-in-out;
+    z-index: 8;
+    padding: 20px;
+    border-radius: 0px 0px 15px 15px ;
+  }
+  
+  .sidebar.visible {
+    top: 70px;
+  }
+  
+  .search-div-animation{ 
+    background: white;
+    position: absolute;
+    border-radius: 21.25px;
+    top: 20px;
+    left: 118%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    box-sizing: border-box;
+    width: 42.5px;
+    height: 42.5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-div-animation input{
+   
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    padding: 10px 20px;
+    background: none;
+}
+
+
+.search-div-animation .bi{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    min-height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #8c52ff;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+
+}
+
+.search-div-animation:hover{
+    width: 300px;
+    cursor: pointer;
+    border-radius: 21.25px 21.25px 0px 0px  ;
+}
+
+.search-div-animation:hover input{
+    display: block;
+}
+
+
+.search-div-animation:hover .bi{
+    background: #8c52ff;
+    z-index: 9;
+    color: white;
+}
+
+
+.search-results {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the input field */
+    left: 0;
+    width: 100%;
+    max-height: 200px; /* Adjust as needed */
+    overflow-y: auto;
+    transition: opacity 0.5s, transform 0.5s; /* Animation for appearance */
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .search-div-animation:hover .search-results,
+  .search-div-animation input:not([value=""]) ~ .search-results {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .search-results div {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 0 0 21.25px 21.25px;
+    cursor: pointer;
+  }
+  
+  .reject-button{
+    background-color: #f65353;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+  }
+
+  .reject-button:hover{
+    background-color: white;
+    color:  #f65353;
+    padding: 8px 20px;
+    border: 1px solid #f65353;
+    outline: 0;
+  }
+  .accept-button{
+    background-color: #f9a225;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+  }
+
+  .accept-button:hover{
+    background-color: white;
+    color: #f9a225;
+    padding: 8px 20px;
+    border: 1px solid #f9a225;
+    outline: 0;
+  }

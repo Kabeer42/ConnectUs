@@ -1,0 +1,64 @@
+.post-grid{
+    margin: 0 10px;
+    margin-top: 50px;
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr)) ;
+    gap: 50px;
+}
+
+
+
+.post-cart{
+    box-shadow: 0 4px 8px 0 rgb(188, 188, 188);
+    transition: 0.3s;
+    width:100%;
+    height: 300px;
+    background: white;
+    border-radius: 10px;
+    overflow:hidden;
+    position:relative
+}
+
+.post-cart:hover {
+    box-shadow: 0 8px 16px 0 rgb(252, 252, 252);
+    cursor: pointer;
+  }
+  .post-cart h3{
+    color: black;
+    font-size: 23px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .Link{
+    text-decoration: 'none'; z-index:1; 
+   
+  }
+
+  .savedButton{
+    display:flex; align-items:end; gap:10px;
+    padding: 10px;
+    width:75%;
+    border-radius: 10px;
+  }
+  .savedButton:hover{
+    cursor: pointer;
+    background: rgb(254, 207, 65);
+    color: white;
+  }
+
+  .img-icon{
+  position: absolute;
+  z-index: 9;
+  display: none;
+  height: 60%;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+  .post-cart:hover .img-icon{
+    display: block;
+  }

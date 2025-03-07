@@ -1,0 +1,39 @@
+.update-info{
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.update-info>div{
+display: flex;
+/* gap: 1rem; */
+/* height: 2.5rem; */
+width: 90%;
+}
+.Error-message{
+font-size: 12px;
+color: red;margin-bottom: 20px	;
+}
+
+/* App.css */
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.update-input{
+  max-height: 45px;
+    padding: 15px 20px;
+}
+.no-spin {
+  -moz-appearance: textfield;
+}
+
+.Error-messages{
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}

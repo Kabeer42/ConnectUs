@@ -1,0 +1,177 @@
+    /* Add this to your CSS file */
+
+      
+.quill-editor-container {
+    position: relative;
+    margin-bottom: 30px;
+    height: 300px;
+}
+
+.quill-editor {
+    /* height: 300px; */
+     /* position: relative; */
+    height: 90%;
+    margin: 20px;
+    border: none;
+  }
+  
+  .quill-editor .ql-container {
+    height: 100%;
+  }
+  
+  .quill-editor .ql-editor {
+    height: 100%;
+  }
+
+
+.input-container{
+    width:100%;
+}
+
+.text-input{
+padding: 10px 8px;
+ margin: 10px;
+width: 80%;
+}
+
+.input-container label{
+    width: 100%;
+    margin-left: 15px;
+    
+}
+
+.skills-input-container{
+    margin-top: 20px;
+    padding: 4px 10px ;
+    display: flex;
+    align-items: center;
+    border: 1px solid orange;
+    height: 40px;
+    width: 10%;
+    transition: width 0.3s; 
+    border-radius: 10px;
+    background-color: rgb(233, 233, 233);
+}
+
+
+.skills-input-container div{
+    border: none;
+    margin: 0;
+    cursor: pointer;
+
+}
+.skills-input-container:hover,
+.skills-input-container:focus-within {  /* Added focus-within for skills-input-container */
+    width:20%;
+}
+.skills-input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    transition: width 0.3s; /* Adding transition for width change */
+}
+
+
+.option-card{
+    box-shadow: 4px 4px 8px 4px rgb(209, 209, 209);
+    margin: 10px auto;
+    width: 90%;
+    padding: 10px ;
+    border-radius: 8px;
+    border: 1px solid rgb(250, 180, 50);
+
+}
+.option-card .box-1{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 14px;
+}
+
+.option-card .box-2{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 14px;
+    justify-items: center;
+    
+}
+
+.select-option{
+    padding: 10px 10px;
+    border:none;
+    background-color: rgb(234, 234, 234);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Button Css */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+.button-container button {
+    width: 20%;
+
+}
+
+.question-button-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display 3 children in 1 row */
+    gap: 10px;
+    justify-items: center;
+    margin: 20px 0px;
+    height: auto;
+
+}
+
+/* .question-button-container button{
+    width: 80%;
+    margin-bottom: 10px;
+    background: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+    color: white;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+} */
+/* .question-button-container button:hover{
+    cursor: pointer;
+    color:  #fca61f;
+    background: transparent;
+    border: 2px solid  #fca61f;   
+
+} */
+.button-active{
+    width: 80%;
+    margin-bottom: 10px;
+    background: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+    color: white;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.button-active:hover{
+    cursor: pointer;
+    color:  #fca61f;
+    background: transparent;
+    border: 2px solid  #fca61f; 
+}
+.button-clicked{
+    height: 50px;
+    border-radius: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color:  #fca61f;
+    background: transparent;
+    border: 2px solid  #fca61f;  
+}
+.button-clicked:hover{
+    background: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+    color: white;
+    border: none;
+   
+}

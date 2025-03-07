@@ -1,0 +1,11 @@
+.friend-sug{
+    display: flex;
+    margin: 10px 20px;
+}
+
+.friend-sug .box-1{
+width: 30%;
+}
+.friend-sug .box-2{
+width: 70%;
+}

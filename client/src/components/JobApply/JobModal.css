@@ -1,0 +1,33 @@
+/* App.css */
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.no-spin {
+    -moz-appearance: textfield;
+  }
+
+  .resumeButton{
+    padding: 10px 22px;
+    color: blue;
+    border: 1px solid blue;
+    border-radius: 20px;
+  }
+
+  .resumeButton:hover{
+    color: white;
+    background: orange;
+    cursor: pointer;
+    border: none;
+  }
+
+  .show-resume{
+    display: flex;
+    width: 80%;
+    margin: 20px 20px;
+    border: 1px solid rgb(194, 193, 193);
+    border-radius: 10px;
+    color: rgb(244, 98, 98);
+
+}

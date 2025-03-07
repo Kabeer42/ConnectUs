@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.Quiz_body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+.Quiz_box{
+  position: relative;
+  width: flex;
+  height: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,.5);
+  overflow: hidden;
+  /* border-radius: 50px; */
+}
+.Quiz_box::before{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(#00ccff,#d400d4);
+  animation: animate 2s linear infinite;
+}
+.Quiz_box::after{
+  content: '';
+  position: absolute;
+  inset:3px;
+  background: #0e1538;
+  border-radius: 16px;
+}
+@keyframes animate {
+  0%
+  {
+    transform: rotate(0deg);
+  }  
+  100%
+  {
+    transform: rotate(350deg);
+  } 
+}
+.Quiz_box h2{
+  position: relative;
+  color: #fff;
+  font-size: 10em;
+  font-size: 10em;
+}
