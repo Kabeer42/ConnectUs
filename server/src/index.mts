@@ -64,9 +64,9 @@ app.use(
 
 // connecting to MongoDB
 const username = encodeURIComponent("mkabeer9242");
-const password = encodeURIComponent("pAHQthz7TSTIG5jJ");
+const password = encodeURIComponent("kmfa3YfbAGeTOKqC");
 //const MongoDB_Connection_String = "mongodb://127.0.0.1:27017/jobs-provider";
-const MongoDB_Connection_String = `mongodb+srv://${username}:${password}@connectus.ykyyrdr.mongodb.net/?retryWrites=true&w=majority&appName=ConnectUS`;
+const MongoDB_Connection_String = `mongodb://${username}:${password}@job-provider.jjgrizo.mongodb.net/?appName=job-provider&retryWrites=true&w=majority`;
 
 async function connectToMongoDB(connectionString: string) {
   await mongoose.connect(connectionString);

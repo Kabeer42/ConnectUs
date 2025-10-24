@@ -51,13 +51,11 @@ app.use(cors({
 }));
 // connecting to MongoDB
 const username = encodeURIComponent("mkabeer9242");
-const password = encodeURIComponent("pAHQthz7TSTIG5jJ");
+const password = encodeURIComponent("kmfa3YfbAGeTOKqC");
 //const MongoDB_Connection_String = "mongodb://127.0.0.1:27017/jobs-provider";
-const MongoDB_Connection_String = `mongodb+srv://${username}:${password}@connectus.lsydzcu.mongodb.net/?appName=ConnectUS`;
+const MongoDB_Connection_String = `mongodb://${username}:${password}@job-provider.jjgrizo.mongodb.net/?appName=job-provider&retryWrites=true&w=majority`;
 async function connectToMongoDB(connectionString) {
-    await mongoose.connect(connectionString)
-  .then(() => console.log("✅ Connected to MongoDB Atlas"))
-  .catch(err => console.error("❌ Connection failed:", err.message));
+    await mongoose.connect(connectionString);
     const db = mongoose.connection;
     // Handle MongoDB connection events
     db.on('error', (error) => {
@@ -69,9 +67,6 @@ async function connectToMongoDB(connectionString) {
 }
 try {
     await connectToMongoDB(MongoDB_Connection_String);
-  
-
-
     // Connection events
 }
 catch (e) {
