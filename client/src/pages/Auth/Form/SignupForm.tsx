@@ -10,7 +10,8 @@ const SignupForm = () => {
   const [conformPass, setConformPass] = useState(true);
   const [loader, setLoader] = useState(false);
 
-const Api = import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+// const Api = import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+const Api = import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
   const handleChange = (e: React.ChangeEvent<HTMLInputElement| HTMLSelectElement>) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };

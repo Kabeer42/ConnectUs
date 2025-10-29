@@ -15,8 +15,10 @@ import { io, Socket } from 'socket.io-client';
 import axios from 'axios';
 import { timeAgo, timeAgoShort } from '../../pages/home/timeAgo';
 
-const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
-const SocketUrl = import.meta.env.VITE_SOCKET_URL? import.meta.env.VITE_SOCKET_URL:'http://localhost:3000';
+// const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
+// const SocketUrl = import.meta.env.VITE_SOCKET_URL? import.meta.env.VITE_SOCKET_URL:'http://localhost:3000';
+const SocketUrl = import.meta.env.VITE_SOCKET_URL? import.meta.env.VITE_SOCKET_URL:'https://connect-us-be.vercel.app/';
 const socket = io(`${SocketUrl}`); // Replace with your server URL
 
   const profilePath = `${Api}uploads/profile/`

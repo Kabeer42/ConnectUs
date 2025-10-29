@@ -49,7 +49,8 @@ const Post: React.FC<PostProps> = ({ data }) => {
 
   const [UserData, setUserData] = useState<any>(data.user_id);
 
-  const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+  // const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+  const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
 
   useEffect(()=>{
     if(aboutThisAccountModal){

@@ -22,38 +22,50 @@ const PORT = 3000;
 const app = express();
 const server = createServer(app);
 const allowedOrigins = ['http://localhost:5173', 'http://192.168.100.12:5173', 'http://0.0.0.0:5173', 'http://192.168.100.12:3000'];
+// const io = new Server(server, {
+//   cors:{ 
+//     origin:  function (origin, callback) {
+//       if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error('Not allowed by CORS'));
+//       }
+//     },
+//     methods:['GET', 'POST'],
+//     credentials: true,
+//   }
+// });
 const io = new Server(server, {
     cors: {
-        origin: function (origin, callback) {
-            if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-                callback(null, true);
-            }
-            else {
-                callback(new Error('Not allowed by CORS'));
-            }
-        },
-        methods: ['GET', 'POST'],
-        credentials: true,
-    }
+        origin: "*", // Allow all origins
+        methods: ["GET", "POST"],
+        credentials: true, // you can keep this true if needed
+    },
 });
 export const getIoInstance = () => io;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+// app.use(
+//     cors({
+//       origin: function (origin, callback) {
+//         if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+//           callback(null, true);
+//         } else {
+//           callback(new Error('Not allowed by CORS'));
+//         }
+//       },
+//     })
+//   );
 app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-            callback(null, true);
-        }
-        else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
+    origin: "*", // Allow all origins
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
 }));
 // connecting to MongoDB
 const username = encodeURIComponent("mkabeer9242");
-const password = encodeURIComponent("kmfa3YfbAGeTOKqC");
+const password = encodeURIComponent("!qa@ws#ed$rf");
 //const MongoDB_Connection_String = "mongodb://127.0.0.1:27017/jobs-provider";
-const MongoDB_Connection_String = `mongodb://${username}:${password}@job-provider.jjgrizo.mongodb.net/?appName=job-provider&retryWrites=true&w=majority`;
+const MongoDB_Connection_String = `mongodb+srv://${username}:${password}@connectus.lsydzcu.mongodb.net/?appName=ConnectUS&retryWrites=true&w=majority`;
 async function connectToMongoDB(connectionString) {
     await mongoose.connect(connectionString);
     const db = mongoose.connection;
