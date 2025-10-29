@@ -1,6 +1,7 @@
 import axios from "axios";
 import makeToast from "./pages/Tosater";
- const Api = import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+//  const Api = import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+ const Api = import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
 
 
 export const fetchUserById = async (id: any) => {

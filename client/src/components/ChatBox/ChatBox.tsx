@@ -34,7 +34,8 @@ const ChatBox: React.FC<ChatBoxProps> = ({ chat, currentUser, setSendMessage, re
 GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.js', import.meta.url).href;
 
  
-  const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+  // const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+  const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
   const REACT_APP_PUBLIC_FOLDER = `${Api}uploads/profile/`;
   const [userData, setUserData] = useState<any>({});
   const [messages, setMessages] = useState<any[]>([]);

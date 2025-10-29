@@ -9,7 +9,8 @@ interface PostProps{
 }
 const PostHeader:React.FC<PostProps> = ({Post, UserData,setAboutThisAccountModal}) => { 
 
-  const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+  // const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+  const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
 
   const [moreOption, setMoreOption] = useState(false);
       const profile = `${Api}uploads/profile/`;
