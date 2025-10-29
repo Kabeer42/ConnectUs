@@ -7,11 +7,11 @@ interface FollowProps {
     follower: any;
 }
 
-// const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
-const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
+const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+// const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
 
-// const socket = io('http://localhost:3000');
-const socket = io('https://connect-us-be.vercel.app/');
+const socket = io('http://localhost:3000');
+// const socket = io('https://connect-us-be.vercel.app/');
 const FollowAction: React.FC<FollowProps> = ({ follower }) => {
     const [isFollowing, setIsFollowing] = useState(false);
     const currentUserId = localStorage.getItem('userId');

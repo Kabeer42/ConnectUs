@@ -16,10 +16,10 @@ interface userPorps{
 
 const ProfileCard:React.FC<userPorps> = ({user}) => {
 
-// const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
-const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
-// const Socket_URL = import.meta.env.VITE_SOCKET_URL? import.meta.env.VITE_SOCKET_URL:'http://localhost:3000/';
-const Socket_URL = import.meta.env.VITE_SOCKET_URL? import.meta.env.VITE_SOCKET_URL:'https://connect-us-be.vercel.app/';
+const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+// const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
+const Socket_URL = import.meta.env.VITE_SOCKET_URL? import.meta.env.VITE_SOCKET_URL:'http://localhost:3000/';
+// const Socket_URL = import.meta.env.VITE_SOCKET_URL? import.meta.env.VITE_SOCKET_URL:'https://connect-us-be.vercel.app/';
   let userId = user._id;
   const currentUserId = localStorage.getItem("userId");
   const [modalOpened, setModalOpened] = useState(false)

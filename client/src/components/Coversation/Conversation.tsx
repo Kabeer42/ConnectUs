@@ -9,8 +9,8 @@ interface ConversationProps {
   online: boolean;
 }
 
-// const Api =  import.meta.env.? import.meta.env.VITE_API_URL:'http://localhost:3000/';
-const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
+const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'http://localhost:3000/';
+// const Api =  import.meta.env.VITE_API_URL? import.meta.env.VITE_API_URL:'https://connect-us-be.vercel.app/';
 
 
 const Conversation: React.FC<ConversationProps> = ({ data, currentUser, online }) => {
