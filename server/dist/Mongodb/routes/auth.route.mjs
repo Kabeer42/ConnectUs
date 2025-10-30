@@ -1,6 +1,6 @@
 // backend/src/routes/authRoutes.ts
 import express from 'express';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { user } from '../models/user.model.mjs';
 const authRouter = express.Router();
